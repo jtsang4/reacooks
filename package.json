@@ -1,0 +1,43 @@
+{
+  "name": "reacooks",
+  "version": "1.0.0",
+  "description": "React Hooks for making developing React application easier.",
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "typings": "dist/index.d.ts",
+  "repository": "https://github.com/wtzeng1/reacooks",
+  "author": "James Tsang <wentao_zeng1@163.com>",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "test": "jest --config ./jest.config.js",
+    "build": "del dist --force && bili --config ./bili.config.js",
+    "prepublish": "yarn test && cross-env NODE_ENV=production && yarn build"
+  },
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "react": "^16.9.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "@testing-library/react-hooks": "^2.0.1",
+    "@types/jest": "^24.0.18",
+    "@types/node": "^12.7.2",
+    "@types/react": "^16.9.2",
+    "babel-jest": "^24.9.0",
+    "bili": "^4.8.1",
+    "cross-env": "^5.2.0",
+    "del-cli": "^2.0.0",
+    "jest": "^24.9.0",
+    "react-test-renderer": "^16.9.0",
+    "rollup-plugin-typescript2": "^0.24.0",
+    "ts-jest": "^24.0.2",
+    "typescript": "^3.6.2"
+  }
+}
