@@ -18,13 +18,13 @@ Toggle value between `truthyValue` and `falsyValue`. The third parameter `truthy
 import { useToggleValue } from 'reacooks';
 
 const App = () => {
-  const [button, toggleButton] = useToggleValue(
-    { showAll: false, text: 'Spread', handler: () => { /* handle spread */ } },
-    { showAll: true, text: 'Fold', handler: () => { /* handle fold */ } },
+  const [buttonConfig, toggleButtonConfig] = useToggleValue(
+    { text: 'Spread', handler: () => { /* handle spread */ } },
+    { text: 'Fold', handler: () => { /* handle fold */ } },
   );
-  // Now `button` is { showAll: false, text: 'Spread', handler: () => { /* handle spread */ } }
-  // After calling toggleButton() the value would toggle.
+  // Now `buttonConfig` is { text: 'Spread', handler: () => { /* handle spread */ } }
+  // After calling toggleButtonConfig() the value would toggle.
 
-  return <button onClick={button.handler}>{button.text}</button>;
+  return <button onClick={buttonConfig.handler}>{buttonConfig.text}</button>;
 };
 ```
